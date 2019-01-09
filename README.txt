@@ -1,0 +1,1 @@
+这是一个用来测试springcloud-config配置中心的demo仓库
