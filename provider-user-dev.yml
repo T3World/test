@@ -17,3 +17,12 @@ logging:
     root: INFO
 remote: 
   str: fromconfig
+#配置actuator健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
