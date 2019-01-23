@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zmj-eureka-server
+  cloud:
+    config:
+#      discovery:
+#        enabled: true
+#        service-id: xx
+#      label: master #好像用默认比这个还快一点点
+      profile: dev
+      uri:
+        http://127.0.0.1:8888
+
+
+      

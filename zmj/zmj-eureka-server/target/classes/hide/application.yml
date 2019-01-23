@@ -19,3 +19,12 @@ eureka:
 logging:
   level:
     root: INFO
+#配置actuator健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
