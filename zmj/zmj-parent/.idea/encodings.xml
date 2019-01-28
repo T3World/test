@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-admin-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-config-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-consumer-helloworld-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-consumer-helloworld-2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-consumer-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-provider-helloworld-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-provider-helloworld-2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zmj-web-parent" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

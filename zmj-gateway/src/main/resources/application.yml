@@ -1,0 +1,43 @@
+server:
+  port: 8080
+  connection-timeout: 50000
+spring:
+  application:
+  
+    name: zmj-gateway
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations: 
+          '[/**]': 
+            allowedOrigins:
+            - "*"
+            allowedMethods: 
+            - GET
+            - POST
+            allowed-headers:
+#            - "x-requested-with"
+#            - "authorization" 
+#            - "Content-Type"
+#            - "Authorization"
+#            - "credential"
+#            - "X-XSRF-TOKEN"
+#            - "token"
+#            - "username"
+#            - "client"
+      discovery:
+        locator:
+          enabled: false
+      enabled: true
+      routes:
+      - id: helloworld_route
+        uri: lb://zmj-consumer-helloworld
+        predicates:
+        - Path=/**
+#        filters:
+#        - PrefixPath=/hello
+#        - SetPath=/hello
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka

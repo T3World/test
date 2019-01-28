@@ -1,0 +1,51 @@
+server:
+  port: 8082
+  
+spring:
+  application:
+    name: zmj-provider-helloworld
+  datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: "jdbc:mysql://127.0.0.1:3306/umr?useUnicode=true&characterEncoding=utf8"
+      username: root
+      password: 3057
+      
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
+      # 是否注册自己的信息到EurekaServer，默认是true
+#      register-with-eureka: false
+      # 是否拉取其它服务的信息，默认是true
+#      fetch-registry: false
+      
+mybatis:
+#  typeAliasesPackage: com.zzmj.pojo
+  mapperLocations: classpath:mappers/*.xml
+  settings:
+       setting:
+            lazyLoadingEnabled: true
+            aggressiveLazyLoading: false
+            cacheEnabled: true
+            logImpl: LOG4J
+logging:
+  level:
+    root: INFO
+  config: classpath:log4j.properties
+#配置actuator健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+info:
+  app:
+    encoding: UTF-8
+    java:
+      source: 1.8
+      target: 1.8

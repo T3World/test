@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: zmj-config-server
+  cloud:
+    config:
+      server:
+        git:
+#          uri: https://github.com/T3World/config-server
+          uri: ssh://admin@192.168.43.106:29418/zmj-config-center.git
+          timeout: 5
+          searchPaths: zmj
+          force-pull: true
+          username: admin
+          password: admin
+#配置actuator健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
