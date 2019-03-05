@@ -1,9 +1,8 @@
 server:
   port: 8080
-  connection-timeout: 50000
+#  connection-timeout: 50000
 spring:
   application:
-  
     name: zmj-gateway
   cloud:
     gateway:
@@ -37,6 +36,10 @@ spring:
 #        filters:
 #        - PrefixPath=/hello
 #        - SetPath=/hello
+      - id: ElectronicControlSystem_route
+        uri: lb://ElectronicControlSystem
+        predicates:
+        - Path=/**
 eureka:
   client:
     serviceUrl:
